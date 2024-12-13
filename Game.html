@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="General.css">
+  <link rel="stylesheet" href="StartMenu.css">
+  <title> TRIBA </title>
+</head>
+<body>
+  <div id="backButtonId" class="backButtonDiv">
+    <a href="StartMenu.html"><img src="arrow-left-circle-fill.svg" class="backButton"></a>
+  </div>
+
+  <div id ="menuId" class="menu">
+    <div class="tribaLogo">
+      <h1>T R I B A</h1>
+    </div>
+    <div class="menuButtons">
+        <button class="button" onclick="init(8,8)">8 x 8</button>
+        <button class="button" onclick="init(8,10)">8 x 10</button>
+        <button class="button" onclick="init(10,12)">10 x 12</button>
+        <button class="button" onclick="init(8,14)"> Secret Shape </button>
+    </div>
+  </div>
+  
+  <div id="backButtonId1" class="backButtonDiv" style="display: none;">
+    <a href="Game.html"><img src="arrow-left-circle-fill.svg" class="backButton"></a>
+  </div>
+
+  <div id="playerTurn" style="display: none;">
+    <div id="leftLineID" class="leftLine"></div>
+    <div id="rightLineID" class="rightLine"></div>
+  </div>
+
+  <div id="gameBoardId" class="gameBoard" style="display: none;">
+    <canvas id="myCanvas" height="700px" width="1000px" onclick="playGame(event)"></canvas>   
+  </div>
+
+  <div id="endPopUp" class="endPopUp" style="display: none;">
+    <h1 id = "whoWon"> PLAYER ONE WON! </h1>
+    <h2> Do you want to play again? </h2>
+    <div class="yesNoButtons">
+      <button onclick="restartGame()"> YES </button>
+      <a href="Game.html"><button> NO </button></a>
+    </div>
+  </div>
+  <script src="Logic.js"></script>
+</body>
+</html>
