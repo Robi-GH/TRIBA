@@ -363,7 +363,7 @@ function orientationOfLine(x1, y1, x2, y2, x3, y3){
     return 0;
   }
 }
-// condition() is used to check if two lines are one the same line
+// condition() is used to check if dots are one the same line while building a triangle
 function condition(){
   let m1 = (List[1][1] - List[0][1])/(List[1][0] - List[0][0]);
   let m2 = (List[2][1] - List[1][1])/(List[2][0] - List[1][0]);
