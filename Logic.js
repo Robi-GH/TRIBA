@@ -363,7 +363,7 @@ function orientationOfLine(x1, y1, x2, y2, x3, y3){
     return 0;
   }
 }
-// ovo je za provjeru da li su na istoj liniji tacke
+// condition() is used to check if two lines are one the same line
 function condition(){
   let m1 = (List[1][1] - List[0][1])/(List[1][0] - List[0][0]);
   let m2 = (List[2][1] - List[1][1])/(List[2][0] - List[1][0]);
@@ -390,7 +390,7 @@ function setDisabledCircles(){
             d = Math.abs((List[k+1][1]-List[k][1])*circleX - (List[k+1][0]-List[k][0])*circleY + List[k+1][0]*List[k][1] - List[k+1][1]*List[k][0])/Math.sqrt(Math.pow((List[k+1][1]-List[k][1]),2) + Math.pow((List[k+1][0]-List[k][0]),2))
             t = ((circleX-List[k][0])*(List[k+1][0]-List[k][0])+(circleY-List[k][1])*(List[k+1][1] - List[k][1]))/(Math.pow((List[k+1][0] - List[k][0]),2) + Math.pow((List[k+1][1] - List[k][1]),2));
           }
-          if(t <= 1 && t >= 0 && d < radius + 2/*+4*/){//mozda ostavim ovako
+          if(t <= 1 && t >= 0 && d < radius + 4){
               if(PlayerOne){
                 ctx.strokeStyle = "red";
                 ctx.fillStyle = "red";
